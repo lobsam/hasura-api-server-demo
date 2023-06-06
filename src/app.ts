@@ -13,7 +13,7 @@ const app = express();
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(bodyParser.json({limit: '50mb'}));
 
-const port = process.env.PORT;
+const port = 3000;
 
 app.get('/', async (req, res) => {
   res.send('Padma api server :-)');

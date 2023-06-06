@@ -4,11 +4,11 @@ import { sessionVariableFormat, hasuraDataFormat, wordDescriptionFormat } from "
 
 function createGqlClient(session : sessionVariableFormat) {
     const headers = Object.assign(session, {
-      'X-Hasura-Admin-Secret': process.env.WEBADMIN_GRAPHQL_ADMIN_SECRET,
+      'X-Hasura-Admin-Secret': 'lHONI6uWCGD3ha73gXnK2Ei3h9Ru7XBL2Nw73CHRBdUXJCMP7hrqnD109VywfjD0',
       'Content-Type': 'application/json'
     })
     const gqlClient = axios.create({
-      baseURL: process.env.WEBADMIN_GRAPHQL_ENDPOINT,
+      baseURL: 'https://padma.hasura.app/v1/graphql',
       headers
     })
     return gqlClient;
